@@ -1,0 +1,26 @@
+/*
+Theme Name: ollie-child
+Theme URI: https://possiblethis.com/
+Description: A child theme for the Ollie WordPress Block Theme.
+Author: Teresa Kaylor
+Author URI: https://github.com/teresakaylor
+Template: ollie
+Version: 1.0.0
+*/
+
+/* --- Custom Digital Core Styles --- */
+
+/* Low opacity borders for Modular Cards using Border Grey */
+.is-style-modular-card {
+	border: 1px solid var(--wp--preset--color--border-grey);
+	opacity: 0.5;
+}
+
+/* Ensure form fields match dark mode (if not already handled by theme.json) */
+input:not([type="submit"]),
+select,
+textarea {
+	background-color: var(--wp--preset--color--background-black);
+	color: var(--wp--preset--color--subtle-shine);
+	border-color: var(--wp--preset--color--border-grey) !important;
+}
