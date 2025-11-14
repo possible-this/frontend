@@ -13,7 +13,7 @@
 					"slug": "digital-blue",
 					"colors": [
 						"#000000",
-						"#0099FF"
+						"#0000FF"
 					]
 				},
 				{
@@ -37,7 +37,7 @@
 				{
 					"name": "Digital Blue Glow",
 					"slug": "digital-blue-glow",
-					"gradient": "radial-gradient(circle, #006DF6 0%, #000000 100%)"
+					"gradient": "radial-gradient(circle, #0000FF 0%, #000000 100%)"
 				},
 				{
 					"name": "System Status Stream",
@@ -59,12 +59,17 @@
 				{
 					"name": "Primary Base (Blue)",
 					"slug": "primary-base",
-					"color": "#006DF6"
+					"color": "#0000FF"
 				},
 				{
-					"name": "Accent Glow (Bright Blue)",
-					"slug": "accent-glow",
+					"name": "Accent Color (Bright Blue)",
+					"slug": "accent-color",
 					"color": "#0099FF"
+				},
+				{
+					"name": "Bold Glow (Bright Aqua)",
+					"slug": "bold-glow",
+					"color": "#8BF7FF"
 				},
 				{
 					"name": "Subtle Shine (Light Grey)",
@@ -125,7 +130,12 @@
 				{
 					"name": "Glow Blue",
 					"slug": "glow-blue",
-					"shadow": "0 0 10px 0 rgba(0, 153, 255, 0.5), 0 0 20px 0 rgba(0, 109, 246, 0.2)"
+					"shadow": "0 0 10px 0 rgba(0, 0, 255, 0.5), 0 0 20px 0 rgba(0, 0, 255, 0.2)"
+				},
+				{
+					"name": "Glow Aqua",
+					"slug": "glow-aqua",
+					"shadow": "0 0 10px 0 rgba(139, 247, 255, 0.7), 0 0 20px 0 rgba(139, 247, 255, 0.4)"
 				},
 				{
 					"name": "Glow Green",
@@ -305,7 +315,7 @@
 					"radius": "4px",
 					"width": "2px",
 					"style": "solid",
-					"color": "var:preset|color|accent-glow"
+					"color": "var:preset|color|bold-glow"
 				},
 				"color": {
 					"background": "var:preset|color|primary-base",
@@ -320,16 +330,16 @@
 					}
 				},
 				"typography": {
-					"fontSize": "var:preset|font-size|small",
+					"fontSize": "var:preset|font-size|base",
 					"fontWeight": "600"
 				},
 				":hover": {
 					"color": {
-						"background": "var:preset|color|accent-glow",
+						"background": "var:preset|color|bold-glow",
 						"text": "var:preset|color|background-black"
 					},
 					"custom": {
-						"shadow": "var:preset|shadow|glow-blue"
+						"shadow": "var:preset|shadow|glow-aqua"
 					},
 					"typography": {
 						"textDecoration": "none"
@@ -349,12 +359,12 @@
 							"fontSize": "var:preset|font-size|small"
 						},
 						"color": {
-							"text": "var:preset|color|accent-glow"
+							"text": "var:preset|color|accent-color"
 						}
 					}
 				},
 				"border": {
-					"color": "var:preset|color|accent-glow",
+					"color": "var:preset|color|bold-glow",
 					"top": {
 						"style": "solid",
 						"width": "5px"
@@ -381,7 +391,7 @@
 							"fontSize": "var:preset|font-size|small"
 						},
 						"color": {
-							"text": "var:preset|color|accent-glow"
+							"text": "var:preset|color|accent-color"
 						}
 					}
 				},
@@ -432,7 +442,7 @@
 			},
 			"core/site-tagline": {
 				"color": {
-					"text": "var:preset|color|accent-glow"
+					"text": "var:preset|color|accent-color"
 				}
 			},
 			"core/navigation": {
@@ -449,7 +459,7 @@
 								"textDecoration": "underline"
 							},
 							"color": {
-								"text": "var:preset|color|accent-glow"
+								"text": "var:preset|color|bold-glow"
 							}
 						}
 					}
@@ -459,7 +469,7 @@
 				"elements": {
 					"link": {
 						"color": {
-							"text": "var:preset|color|accent-glow"
+							"text": "var:preset|color|accent-color"
 						}
 					}
 				}
@@ -475,7 +485,7 @@
 					"radius": "4px",
 					"width": "2px",
 					"style": "solid",
-					"color": "var:preset|color|accent-glow"
+					"color": "var:preset|color|bold-glow"
 				},
 				"color": {
 					"background": "var:preset|color|primary-base",
@@ -495,11 +505,11 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var:preset|color|accent-glow",
+						"background": "var:preset|color|bold-glow",
 						"text": "var:preset|color|background-black"
 					},
 					"custom": {
-						"shadow": "var:preset|shadow|glow-blue"
+						"shadow": "var:preset|shadow|glow-aqua"
 					}
 				}
 			},
@@ -550,14 +560,14 @@
 			},
 			"link": {
 				"color": {
-					"text": "var:preset|color|accent-glow"
+					"text": "var:preset|color|accent-color"
 				},
 				"typography": {
 					"textDecoration": "none"
 				},
 				":hover": {
 					"color": {
-						"text": "var:preset|color|primary-base"
+						"text": "var:preset|color|bold-glow"
 					},
 					"typography": {
 						"textDecoration": "underline"
