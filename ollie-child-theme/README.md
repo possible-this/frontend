@@ -26,15 +26,17 @@ This child theme is built specifically to override default colors and typography
 
 ### 1. Color Palette: Defined in `theme.json`
 
-The palette is **dark-mode first**, ensuring blue accents and system status green pop against the black background.
+The palette is **dark-mode first**, ensuring the **blue and aqua** accents and system status green pop against the black background.
 
 | Name | Hex Code | Theme.json Slug | Usage | Rationale |
 | :--- | :--- | :--- | :--- | :--- |
 | **Background (Absolute Black)** | `#000000` | `background-black` | Primary Background | Absolute black for maximum contrast and "void of space" feeling. |
-| **Primary Base (Blue)** | `#006DF6` | `primary-base` | Features, CTA Background (Default) | Bold blue for a mysterious, primary element focus. |
-| **Accent Glow (Bright Blue)** | `#0099FF` | `accent-glow` | Links, Hover States, Key Icons, Button Borders | Represents knowledge, future, and illumination. |
+| **Primary Base (Blue)** | `#0000FF` | `primary-base` | Features, CTA Background (Default) | **Pure, bold blue** for a primary, authoritative focus. |
+| **Accent Color (Bright Blue)** | `#0099FF` | `accent-color` | Links, Key Icons, Secondary CTAs | Represents knowledge, future, and **readable illumination**. |
+| **Bold Glow (Bright Aqua)** | `#8BF7FF` | `bold-glow` | Button hover, link hover glow, primary link color (hover). | **Vibrant aqua** for maximum drama and highlight effect. Represents mystery. |
 | **Subtle Shine (Light Grey)** | `#A8C3E5` | `subtle-shine` | Body Text, Subheadings | Cool-toned grey for readability against black. |
 | **System Status (Neon Green)** | `#00FF00` | `system-status` | Verdict Highlights, Code Text, Success Messages | Classic neon green for a data stream/terminal feel. |
+| **Pure White** | `#FFFFFF` | `pure-white` | Text in specific CTA buttons, important contrast element. | Ensures readability on dark backgrounds. |
 | **Code Block Background** | `#141414` | `code-bg` | Background for code/preformatted blocks. | Slightly softer container for console output. |
 | **Border Grey** | `#333333` | `border-grey` | Low-opacity separators, table borders. | Dark, faint border to create structure. |
 
@@ -51,8 +53,8 @@ The theme exclusively uses a high-performance font already included with Ollie.
 | :--- | :--- | :--- |
 | **Site Background** | Absolute Black (`#000000`) | Global `styles.color.background` |
 | **Body Text** | Subtle Shine (`#A8C3E5`) | Global `styles.color.text` |
-| **Links / Primary Accent** | Accent Glow (`#0099FF`) | `styles.elements.link` |
-| **Primary CTA Button** | Background: `primary-base`, Border: `accent-glow` | `styles.blocks.core/button` |
+| **Links / Primary Accent** | Accent Color (`#0099FF`) | `styles.elements.link` (default color) |
+| **Link Hover** | Bold Glow (`#8BF7FF`) | `styles.elements.link` (`:hover` state) |
+| **Primary CTA Button** | Background: `primary-base`, Border: `bold-glow` | `styles.blocks.core/button` |
 | **Code Blocks** | Text: `system-status`, Background: `code-bg` | `styles.blocks.core/code` |
-| **Shadows (Light Flare)** | `glow-blue` and `glow-green` | Custom shadow presets for use on cards/CTAs. |
-
+| **Shadows (Light Flare)** | `glow-aqua` and `glow-green` | Custom shadow presets (`glow-aqua` is new) for use on cards/CTAs. |
