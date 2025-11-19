@@ -1,24 +1,31 @@
-/* 1. Basic Floating Button Styles */
+/* --- Floating Button Styles (Save as floating-elements.css) --- */
+
 .floating-btn {
   position: fixed; /* Keeps it in the viewport */
-  bottom: 20px;       /* 20px from the top */
-  right: 20px;      /* 20px from the left */
+  top: 86px;    
+  right: 20px;    
   z-index: 1000;   /* Stays above content */
   cursor: pointer;
+  text-decoration: none; /* Removes the link underline */
   
-  /* Dimensions and Round Shape */
-  width: 60px;     /* Set a fixed width */
-  height: 60px;    /* Set a fixed height */
-  border-radius: 50%; /* Makes it perfectly round */
+  /* Dimensions for Pill Shape */
+  min-width: 100px; /* Minimum width to fit text comfortably */
+  height: 40px;    /* Fixed height, similar to header button */
+  line-height: 40px; /* Vertically centers text in the new height */
+  border-radius: 50px; /* Makes it a pill shape */
+  padding: 0 20px; /* Adds horizontal padding inside the button */
+  
+  /* Text and Alignment */
+  text-align: center; /* Centers the text horizontally */
+  color: #000000 !important; /* Text color */
+  font-size: 1rem; /* Slightly larger text for better readability */
+  font-weight: 900; /* BOLDER: Increased font weight for emphasis */
+  text-transform: uppercase; /* Ensure text is uppercase */
+  white-space: nowrap; /* Prevents text from wrapping */
   
   /* Color and Shadow */
-  background-color: #8BF7FF; /* Bright, attention-grabbing color (cyan) */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Adds depth */
-  
-  /* Centering the content (the image) */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #00E4FF; /* Replaced placeholder with the cyan from your header button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   
   /* Smooth transition for hover effects */
   transition: background-color 0.3s, transform 0.2s;
@@ -26,13 +33,6 @@
 
 /* Hover Effect */
 .floating-btn:hover {
-  background-color: #00E4FF; /* Darker cyan on hover */
+  background-color: #8BF7FF; /* Slightly darker cyan for hover */
   transform: scale(1.05); /* Slight lift effect */
-}
-
-/* 2. Image/Icon Styles */
-.vote-icon {
-  width: 60%; /* Make the icon take up 60% of the button size */
-  height: 60%;
-  object-fit: contain; /* Ensures the image scales properly */
 }
