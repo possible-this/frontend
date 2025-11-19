@@ -2,7 +2,7 @@
 
 .floating-btn {
   position: fixed; /* Keeps it in the viewport */
-  top: 86px;    
+  top: 100px;    
   right: 20px;    
   z-index: 1000;   /* Stays above content */
   cursor: pointer;
