@@ -1,8 +1,8 @@
-# 🌌 Ollie Child Theme: Possible This - Digital Core
+# 💫 Ollie Child Theme: Possible This - Brand Core
 
 This directory contains the child theme configuration for the "Possible This" website, based on the **Ollie Block Theme** for WordPress.
 
-The goal of this theme is to establish a high-contrast, dark-mode-first aesthetic (The "Digital Core") optimized for performance and data-driven content.
+The goal of this theme is to establish a high-performance, **light-mode-first aesthetic** (The "Brand Core") focused on clarity and utilizing a fresh, bright color palette.
 
 ---
 
@@ -16,45 +16,48 @@ This child theme is built specifically to override default colors and typography
 
 ### 📁 Files in This Directory
 
-1.  `style.css`: Contains the required child theme header to register with WordPress. (Minimal content).
-2.  `theme.json`: Contains the complete **Digital Core** style guide, including colors, typography, and block styles.
-3.  `functions.php`: **(DELETED)** File was removed to prevent enqueuing external Google Fonts (Roboto/Montserrat) in favor of the locally included Space Grotesque.
+1. `style.css`: Contains the required child theme header to register with WordPress. (Minimal content).
+2. `theme.json`: Contains the complete **Brand Core** style guide, including colors, typography, and block styles.
+3. `functions.php`: **(DELETED)** File was removed to prevent enqueuing external Google Fonts in favor of the locally included Mona Sans families.
 
 ---
 
-## 🎨 Digital Core: Style Guide Implementation
+## 🎨 Brand Core: Style Guide Implementation
 
 ### 1. Color Palette: Defined in `theme.json`
 
-The palette is **dark-mode first**, ensuring the **blue and aqua** accents and system status green pop against the black background.
+The palette is **light-mode first**, featuring a **white base** and utilizing the bright **Brand** and **Brand Accent** colors for pop and focus.
 
 | Name | Hex Code | Theme.json Slug | Usage | Rationale |
 | :--- | :--- | :--- | :--- | :--- |
-| **Background (Absolute Black)** | `#000000` | `background-black` | Primary Background | Absolute black for maximum contrast and "void of space" feeling. |
-| **Primary Base (Blue)** | `#0000FF` | `primary-base` | Features, CTA Background (Default) | **Pure, bold blue** for a primary, authoritative focus. |
-| **Accent Color (Bright Blue)** | `#0099FF` | `accent-color` | Links, Key Icons, Secondary CTAs | Represents knowledge, future, and **readable illumination**. |
-| **Bold Glow (Bright Aqua)** | `#8BF7FF` | `bold-glow` | Button hover, link hover glow, primary link color (hover). | **Vibrant aqua** for maximum drama and highlight effect. Represents mystery. |
-| **Subtle Shine (Light Grey)** | `#A8C3E5` | `subtle-shine` | Body Text, Subheadings | Cool-toned grey for readability against black. |
-| **System Status (Neon Green)** | `#00FF00` | `system-status` | Verdict Highlights, Code Text, Success Messages | Classic neon green for a data stream/terminal feel. |
-| **Pure White** | `#FFFFFF` | `pure-white` | Text in specific CTA buttons, important contrast element. | Ensures readability on dark backgrounds. |
-| **Code Block Background** | `#141414` | `code-bg` | Background for code/preformatted blocks. | Slightly softer container for console output. |
-| **Border Grey** | `#333333` | `border-grey` | Low-opacity separators, table borders. | Dark, faint border to create structure. |
+| **Base (White)** | `#FFFFFF` | `base` | Primary Background | Clean white for maximum contrast in a light environment. |
+| **Base Accent (Dark Grey)** | `#4E5152` | `base-accent` | Body Text, Subheadings | Dark grey for high readability against the white background. |
+| **Brand** | `#00E4FF` | `brand` | Features, CTA Background (Default) | **Bright, energetic cyan** for a primary, authoritative focus. |
+| **Brand Accent** | `#8BF7FF` | `brand-accent` | Button hover, link hover glow, key highlights. | **Vibrant aqua** for maximum drama and highlight effect. |
+| **Brand Alt Accent** | `#366F74` | `brand-alt-accent` | Links, Key Icons, Secondary CTAs | A contrasting dark teal/green that pairs well with the bright brand colors. |
+| **Contrast (Black)** | `#000000` | `contrast` | Text in specific CTA buttons, highest contrast element. | Ensures readability on light backgrounds. |
+| **Border Base** | `#A3B4B5` | `border-base` | Low-opacity separators, table borders. | Medium, neutral border to create structure. |
+| **Border Contrast** | `#284649` | `border-contrast` | Background for Code Blocks (Dark Container). | Dark background for code to preserve a terminal feel and contrast against light page. |
+| **Tint (Light Aqua)** | `#E9F7F8` | `tint` | Subtle background shifts, soft containers. | Provides a slight lift from the pure white base. |
 
 ### 2. Typography: Optimized for Performance
 
-The theme exclusively uses a high-performance font already included with Ollie.
+The theme uses high-performance font families that replace the previous selection.
 
-* **Font Family:** **Space Grotesque** (`space-grotesk` slug)
-* **Usage:** Used for all Body Text (Weight 400) and Headings (Weight 700) via global settings in `theme.json`.
+| Font Family | Theme.json Slug | Usage |
+| :--- | :--- | :--- |
+| **Mona Sans Narrow** | `mona-sans-narrow` | **Headings** (H1-H6, Site Title) |
+| **Mona Sans** | `mona-sans` | **Body Text** (Global, Paragraphs, Lists) |
+| **Monospace** | `monospace` | **Code Blocks** (Preformatted, Code) |
 
 ### 3. Key Block Styling
 
 | Block Element | Style Applied | Theme.json Implementation |
 | :--- | :--- | :--- |
-| **Site Background** | Absolute Black (`#000000`) | Global `styles.color.background` |
-| **Body Text** | Subtle Shine (`#A8C3E5`) | Global `styles.color.text` |
-| **Links / Primary Accent** | Accent Color (`#0099FF`) | `styles.elements.link` (default color) |
-| **Link Hover** | Bold Glow (`#8BF7FF`) | `styles.elements.link` (`:hover` state) |
-| **Primary CTA Button** | Background: `primary-base`, Border: `bold-glow` | `styles.blocks.core/button` |
-| **Code Blocks** | Text: `system-status`, Background: `code-bg` | `styles.blocks.core/code` |
-| **Shadows (Light Flare)** | `glow-aqua` and `glow-green` | Custom shadow presets (`glow-aqua` is new) for use on cards/CTAs. |
+| **Site Background** | Base (`#FFFFFF`) | Global `styles.color.background` |
+| **Body Text** | Base Accent (`#4E5152`) | Global `styles.color.text` |
+| **Links / Primary Accent** | Brand Alt Accent (`#366F74`) | `styles.elements.link` (default color) |
+| **Link Hover** | Brand Accent (`#8BF7FF`) | `styles.elements.link` (`:hover` state) |
+| **Primary CTA Button** | Background: `brand`, Text: `contrast`, Border: `brand-accent` | `styles.blocks.core/button` |
+| **Code Blocks** | Text: `brand-accent`, Background: `border-contrast` | `styles.blocks.core/code` |
+| **Shadows (Light Flare)** | `glow-brand` and `glow-brand-accent` | Custom shadow presets for use on cards/CTAs. |
