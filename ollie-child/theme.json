@@ -9,92 +9,102 @@
 			"defaultPalette": false,
 			"duotone": [
 				{
-					"name": "Digital Blue",
-					"slug": "digital-blue",
+					"name": "Brand",
+					"slug": "brand",
 					"colors": [
-						"#000000",
-						"#0000FF"
+						"#FFFFFF",
+						"#00E4FF"
 					]
 				},
 				{
-					"name": "Data Green",
-					"slug": "data-green",
+					"name": "Brand Accent",
+					"slug": "brand-accent",
 					"colors": [
-						"#000000",
-						"#00FF00"
+						"#FFFFFF",
+						"#8BF7FF"
 					]
 				},
 				{
 					"name": "Grayscale",
 					"slug": "grayscale",
 					"colors": [
-						"#000",
+						"#000000",
 						"#fff"
 					]
 				}
 			],
 			"gradients": [
 				{
-					"name": "Digital Blue Glow",
-					"slug": "digital-blue-glow",
-					"gradient": "radial-gradient(circle, #0000FF 0%, #000000 100%)"
+					"name": "Brand Glow",
+					"slug": "brand-glow",
+					"gradient": "radial-gradient(circle, #00E4FF 0%, #FFFFFF 100%)"
 				},
 				{
-					"name": "System Status Stream",
-					"slug": "system-status-stream",
-					"gradient": "linear-gradient(90deg, #00FF00 0%, #000000 100%)"
+					"name": "Brand Alt Stream",
+					"slug": "brand-alt-stream",
+					"gradient": "linear-gradient(90deg, #A1CCD0 0%, #FFFFFF 100%)"
 				},
 				{
-					"name": "Void Black",
-					"slug": "void-black",
-					"gradient": "linear-gradient(135deg, #000000, #1E1E26)"
+					"name": "Contrast Dark",
+					"slug": "contrast-dark",
+					"gradient": "linear-gradient(135deg, #000000, #4E5152)"
 				}
 			],
 			"palette": [
 				{
-					"name": "Background (Absolute Black)",
-					"slug": "background-black",
-					"color": "#000000"
-				},
-				{
-					"name": "Primary Base (Blue)",
-					"slug": "primary-base",
-					"color": "#0000FF"
-				},
-				{
-					"name": "Accent Color (Bright Blue)",
-					"slug": "accent-color",
-					"color": "#0099FF"
-				},
-				{
-					"name": "Bold Glow (Bright Aqua)",
-					"slug": "bold-glow",
-					"color": "#8BF7FF"
-				},
-				{
-					"name": "Subtle Shine (Light Grey)",
-					"slug": "subtle-shine",
-					"color": "#A8C3E5"
-				},
-				{
-					"name": "System Status (Neon Green)",
-					"slug": "system-status",
-					"color": "#00FF00"
-				},
-				{
-					"name": "Pure White",
-					"slug": "pure-white",
+					"name": "Base (White)",
+					"slug": "base",
 					"color": "#FFFFFF"
 				},
 				{
-					"name": "Code Block Background",
-					"slug": "code-bg",
-					"color": "#141414"
+					"name": "Brand",
+					"slug": "brand",
+					"color": "#00E4FF"
 				},
 				{
-					"name": "Border Grey",
-					"slug": "border-grey",
-					"color": "#333333"
+					"name": "Brand Accent",
+					"slug": "brand-accent",
+					"color": "#8BF7FF"
+				},
+				{
+					"name": "Brand Alt",
+					"slug": "brand-alt",
+					"color": "#A1CCD0"
+				},
+				{
+					"name": "Brand Alt Accent",
+					"slug": "brand-alt-accent",
+					"color": "#366F74"
+				},
+				{
+					"name": "Contrast (Black)",
+					"slug": "contrast",
+					"color": "#000000"
+				},
+				{
+					"name": "Contrast Accent (Light Grey)",
+					"slug": "contrast-accent",
+					"color": "#CDD1D1"
+				},
+				{
+					"name": "Base Accent (Dark Grey)",
+					"slug": "base-accent",
+					"color": "#4E5152"
+				},
+				{
+					"name": "Tint (Light Aqua)",
+					"slug": "tint",
+					"color": "#E9F7F8"
+				},
+				{
+					"name": "Border Base",
+					"slug": "border-base",
+					"color": "#A3B4B5"
+				},
+				{
+					"name": "Border Contrast",
+					"slug": "border-contrast",
+					"color": "#284649"
 				}
 			],
 			"link": true
@@ -128,19 +138,19 @@
 			"defaultPresets": false,
 			"presets": [
 				{
-					"name": "Glow Blue",
-					"slug": "glow-blue",
-					"shadow": "0 0 10px 0 rgba(0, 0, 255, 0.5), 0 0 20px 0 rgba(0, 0, 255, 0.2)"
+					"name": "Glow Brand",
+					"slug": "glow-brand",
+					"shadow": "0 0 10px 0 rgba(0, 228, 255, 0.5), 0 0 20px 0 rgba(0, 228, 255, 0.2)"
 				},
 				{
-					"name": "Glow Aqua",
-					"slug": "glow-aqua",
+					"name": "Glow Brand Accent",
+					"slug": "glow-brand-accent",
 					"shadow": "0 0 10px 0 rgba(139, 247, 255, 0.7), 0 0 20px 0 rgba(139, 247, 255, 0.4)"
 				},
 				{
-					"name": "Glow Green",
-					"slug": "glow-green",
-					"shadow": "0 0 10px 0 rgba(0, 255, 0, 0.5), 0 0 20px 0 rgba(0, 255, 0, 0.2)"
+					"name": "Glow Brand Alt Accent",
+					"slug": "glow-brand-alt-accent",
+					"shadow": "0 0 10px 0 rgba(54, 111, 116, 0.5), 0 0 20px 0 rgba(54, 111, 116, 0.2)"
 				},
 				{
 					"name": "No Shadow",
@@ -207,9 +217,14 @@
 			"writingMode": true,
 			"fontFamilies": [
 				{
-					"fontFamily": "Space Grotesk, sans-serif",
-					"name": "Space Grotesk (Primary)",
-					"slug": "space-grotesk"
+					"fontFamily": "Mona Sans Narrow, sans-serif",
+					"name": "Mona Sans Narrow (Headings)",
+					"slug": "mona-sans-narrow"
+				},
+				{
+					"fontFamily": "Mona Sans, sans-serif",
+					"name": "Mona Sans (Primary)",
+					"slug": "mona-sans"
 				},
 				{
 					"fontFamily": "monospace",
@@ -294,8 +309,8 @@
 					"width": "0px"
 				},
 				"color": {
-					"background": "var:preset|color|code-bg",
-					"text": "var:preset|color|system-status"
+					"background": "var:preset|color|border-contrast",
+					"text": "var:preset|color|brand-accent"
 				},
 				"spacing": {
 					"padding": {
@@ -306,7 +321,7 @@
 					}
 				},
 				"typography": {
-					"fontFamily": "var:preset|font-family|monospace)",
+					"fontFamily": "var:preset|font-family|monospace",
 					"fontSize": "var:preset|font-size|small"
 				}
 			},
@@ -315,11 +330,11 @@
 					"radius": "4px",
 					"width": "2px",
 					"style": "solid",
-					"color": "var:preset|color|bold-glow"
+					"color": "var:preset|color|brand-accent"
 				},
 				"color": {
-					"background": "var:preset|color|primary-base",
-					"text": "var:preset|color|pure-white"
+					"background": "var:preset|color|brand",
+					"text": "var:preset|color|contrast"
 				},
 				"spacing": {
 					"padding": {
@@ -335,11 +350,11 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var:preset|color|bold-glow",
-						"text": "var:preset|color|background-black"
+						"background": "var:preset|color|brand-accent",
+						"text": "var:preset|color|contrast"
 					},
 					"custom": {
-						"shadow": "var:preset|shadow|glow-aqua"
+						"shadow": "var:preset|shadow|glow-brand-accent"
 					},
 					"typography": {
 						"textDecoration": "none"
@@ -348,7 +363,7 @@
 			},
 			"core/separator": {
 				"color": {
-					"text": "var:preset|color|border-grey"
+					"text": "var:preset|color|border-base"
 				},
 				"css": "hr { opacity: 0.5; }"
 			},
@@ -359,12 +374,12 @@
 							"fontSize": "var:preset|font-size|small"
 						},
 						"color": {
-							"text": "var:preset|color|accent-color"
+							"text": "var:preset|color|brand-alt-accent"
 						}
 					}
 				},
 				"border": {
-					"color": "var:preset|color|bold-glow",
+					"color": "var:preset|color|brand",
 					"top": {
 						"style": "solid",
 						"width": "5px"
@@ -391,7 +406,7 @@
 							"fontSize": "var:preset|font-size|small"
 						},
 						"color": {
-							"text": "var:preset|color|accent-color"
+							"text": "var:preset|color|brand-alt-accent"
 						}
 					}
 				},
@@ -400,7 +415,7 @@
 					"radius": "0",
 					"style": "solid",
 					"width": "0 0 0 5px !important",
-					"color": "var:preset|color|system-status"
+					"color": "var:preset|color|brand"
 				},
 				"spacing": {
 					"padding": {
@@ -421,16 +436,16 @@
 				"typography": {
 					"fontSize": "var:preset|font-size|base"
 				},
-				"css": "th, td { border-color: var(--wp--preset--color--border-grey) !important; }"
+				"css": "th, td { border-color: var(--wp--preset--color--border-base) !important; }"
 			},
 			"core/list": {
 				"color": {
-					"text": "var:preset|color|subtle-shine"
+					"text": "var:preset|color|base-accent"
 				}
 			},
 			"core/heading": {
 				"color": {
-					"text": "var:preset|color|subtle-shine"
+					"text": "var:preset|color|base-accent"
 				}
 			},
 			"core/site-title": {
@@ -442,7 +457,7 @@
 			},
 			"core/site-tagline": {
 				"color": {
-					"text": "var:preset|color|accent-color"
+					"text": "var:preset|color|brand-alt-accent"
 				}
 			},
 			"core/navigation": {
@@ -452,14 +467,14 @@
 				"elements": {
 					"link": {
 						"color": {
-							"text": "var:preset|color|subtle-shine"
+							"text": "var:preset|color|base-accent"
 						},
 						":hover": {
 							"typography": {
 								"textDecoration": "underline"
 							},
 							"color": {
-								"text": "var:preset|color|bold-glow"
+								"text": "var:preset|color|brand-accent"
 							}
 						}
 					}
@@ -469,15 +484,15 @@
 				"elements": {
 					"link": {
 						"color": {
-							"text": "var:preset|color|accent-color"
+							"text": "var:preset|color|brand-alt-accent"
 						}
 					}
 				}
 			}
 		},
 		"color": {
-			"background": "var:preset|color|background-black",
-			"text": "var:preset|color|subtle-shine"
+			"background": "var:preset|color|base",
+			"text": "var:preset|color|base-accent"
 		},
 		"elements": {
 			"button": {
@@ -485,11 +500,11 @@
 					"radius": "4px",
 					"width": "2px",
 					"style": "solid",
-					"color": "var:preset|color|bold-glow"
+					"color": "var:preset|color|brand-accent"
 				},
 				"color": {
-					"background": "var:preset|color|primary-base",
-					"text": "var:preset|color|pure-white"
+					"background": "var:preset|color|brand",
+					"text": "var:preset|color|contrast"
 				},
 				"spacing": {
 					"padding": {
@@ -505,11 +520,11 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var:preset|color|bold-glow",
-						"text": "var:preset|color|background-black"
+						"background": "var:preset|color|brand-accent",
+						"text": "var:preset|color|contrast"
 					},
 					"custom": {
-						"shadow": "var:preset|shadow|glow-aqua"
+						"shadow": "var:preset|shadow|glow-brand-accent"
 					}
 				}
 			},
@@ -553,21 +568,21 @@
 			},
 			"heading": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|space-grotesk",
+					"fontFamily": "var:preset|font-family|mona-sans-narrow",
 					"fontWeight": "700",
 					"lineHeight": "var:custom|line-height|snug"
 				}
 			},
 			"link": {
 				"color": {
-					"text": "var:preset|color|accent-color"
+					"text": "var:preset|color|brand-alt-accent"
 				},
 				"typography": {
 					"textDecoration": "none"
 				},
 				":hover": {
 					"color": {
-						"text": "var:preset|color|bold-glow"
+						"text": "var:preset|color|brand-accent"
 					},
 					"typography": {
 						"textDecoration": "underline"
@@ -576,7 +591,7 @@
 			},
 			"caption": {
 				"color": {
-					"text": "var:preset|color|subtle-shine"
+					"text": "var:preset|color|base-accent"
 				}
 			}
 		},
@@ -590,7 +605,7 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "var:preset|font-family|space-grotesk",
+			"fontFamily": "var:preset|font-family|mona-sans",
 			"fontSize": "var:preset|font-size|base",
 			"fontWeight": "400",
 			"lineHeight": "var:custom|line-height|body"
