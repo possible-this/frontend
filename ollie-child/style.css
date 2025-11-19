@@ -5,22 +5,25 @@ Description: A child theme for the Ollie WordPress Block Theme.
 Author: Teresa Kaylor
 Author URI: https://github.com/teresakaylor
 Template: ollie
-Version: 1.0.0
+Version: 2.0.0
 */
 
-/* --- Custom Digital Core Styles --- */
+/* --- Custom Brand Styles --- */
 
-/* Low opacity borders for Modular Cards using Border Grey */
+/* Low opacity borders for Modular Cards using Border Base */
 .is-style-modular-card {
-	border: 1px solid var(--wp--preset--color--border-grey);
+	border: 1px solid var(--wp--preset--color--border-base);
 	opacity: 0.5;
 }
 
-/* Ensure form fields match dark mode (if not already handled by theme.json) */
+/* Ensure form fields match light mode */
 input:not([type="submit"]),
 select,
 textarea {
-	background-color: var(--wp--preset--color--background-black);
-	color: var(--wp--preset--color--subtle-shine);
-	border-color: var(--wp--preset--color--border-grey) !important;
+	/* Background: Base (White) or Tint (E9F7F8) for subtle contrast, using Base for clean look */
+	background-color: var(--wp--preset--color--base);
+	/* Text Color: Dark grey for readability */
+	color: var(--wp--preset--color--base-accent);
+	/* Border Color: Light/Medium grey */
+	border-color: var(--wp--preset--color--border-base) !important;
 }
