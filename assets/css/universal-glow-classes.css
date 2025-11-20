@@ -1,0 +1,29 @@
+* ------------------------------------------------------------------- */
+/* UNIVERSAL GLOW CLASSES (Use these on any element) */
+/* ------------------------------------------------------------------- */
+
+/* The base style for a glowing effect (subtle blue glow) */
+.glow-on-hover {
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Normal state shadow */
+}
+
+.glow-on-hover:hover {
+  /* Adds a wider, softer cyan glow (like current button color) */
+  box-shadow: 0 0 10px rgba(0, 228, 255, 0.8), /* Soft inner glow */
+              0 0 20px rgba(0, 228, 255, 0.6), /* Wider outer glow */
+              0 4px 12px rgba(0, 0, 0, 0.6); /* Retains some original shadow */
+  transform: translateY(-2px); /* Slight lift for emphasis */
+}
+
+/* STANDARD INLINE LINK GLOW */
+a {
+  /* Set a transition for regular links */
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+  /* Adds a subtle text shadow that mimics a glow */
+ /*  color: #00E4FF; Change link color to the glow color */
+  text-shadow: 0 0 5px rgba(0, 228, 255, 0.8);
+}
