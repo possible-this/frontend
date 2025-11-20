@@ -1,38 +1,40 @@
-/* --- Floating Button Styles (Save as floating-elements.css) --- */
-
 .floating-btn {
   position: fixed; /* Keeps it in the viewport */
-  top: 100px;    
-  right: 20px;    
-  z-index: 1000;   /* Stays above content */
+  top: 115px; 
+  right: 10px;
+  z-index: 1000; /* Stays above content */
   cursor: pointer;
   text-decoration: none; /* Removes the link underline */
-  
-  /* Dimensions for Pill Shape */
-  min-width: 100px; /* Minimum width to fit text comfortably */
-  height: 40px;    /* Fixed height, similar to header button */
-  line-height: 40px; /* Vertically centers text in the new height */
-  border-radius: 50px; /* Makes it a pill shape */
-  padding: 0 20px; /* Adds horizontal padding inside the button */
-  
+
+  /* Flexbox for perfect wrapping and centering */
+  display: flex;
+  align-items: center; /* Vertically centers the stacked text */
+  justify-content: center; /* Horizontally centers the stacked text */
+
+  /* Dimensions for Button */
+  width: 70px; /* Sets a fixed width to FORCE the wrapping/stacking */
+  border-radius: 60px;
+  padding: 12px 15px; /* Adjusted: Use top/bottom padding for height control */
+
   /* Text and Alignment */
-  text-align: center; /* Centers the text horizontally */
-  color: #000000 !important; /* Text color */
-  font-size: 1rem; /* Slightly larger text for better readability */
-  font-weight: 900; /* BOLDER: Increased font weight for emphasis */
-  text-transform: uppercase; /* Ensure text is uppercase */
-  white-space: nowrap; /* Prevents text from wrapping */
-  
+  text-align: center;
+  color: #000000 !important;
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  white-space: normal;
+  line-height: 1.1;
+
   /* Color and Shadow */
-  background-color: #00E4FF; /* Replaced placeholder with the cyan from your header button */
+  background-color: #00E4FF;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  
+
   /* Smooth transition for hover effects */
   transition: background-color 0.3s, transform 0.2s;
 }
 
 /* Hover Effect */
 .floating-btn:hover {
-  background-color: #8BF7FF; /* Slightly darker cyan for hover */
+  background-color: #8BF7FF; /* Slightly lighter cyan for hover */
   transform: scale(1.05); /* Slight lift effect */
 }
