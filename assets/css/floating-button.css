@@ -1,3 +1,7 @@
+/* ------------------------------------------------------------------- */
+/* 1. UNIVERSAL FLOATING "VOTE NOW" BUTTON  */
+/* ------------------------------------------------------------------- */
+
 .floating-btn {
   position: fixed; /* Keeps it in the viewport */
   top: 115px; 
