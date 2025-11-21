@@ -41,54 +41,29 @@
               background-color 0.3s;
 }
 
-/* =================================================================== */
-/* ANIMATION OPTION 1: THE LEVITATION REACTOR (Active)                 */
-/* "Technological Magic" - Floats up and glows like an artifact        */
-/* =================================================================== */
-
-.floating-btn:hover {
-  /* The Lift: Moves UP 5 pixels to simulate anti-gravity */
-  transform: translateY(-6px); 
-
-  /* The Reactor Glow: */
-  background-color: #8BF7FF; /* Center gets slightly brighter/whiter */
-  
-  /* The Shadow:
-     1. Inner bright glow (The core)
-     2. Outer cyan spread (The atmosphere)
-     3. Deep shadow (The distance from the ground) */
-  box-shadow: 
-    0 0 10px #8BF7FF,        /* Core intensity */
-    0 0 25px #00E4FF,        /* Atmospheric glow */
-    0 15px 20px rgba(0, 0, 0, 0.5); /* Ground shadow moves away */
-}
-
-
-/* =================================================================== */
-/* ANIMATION OPTION 2: THE ENERGY SURGE (Commented Out)                */
-/* "Power Up" - Stays still, but gets intensely bright                 */
-/* =================================================================== */
-
-/* .floating-btn:hover {
-  background-color: #ffffff; 
-  transform: scale(1.0); 
-  box-shadow: 
-    0 0 10px #00E4FF,
-    0 0 40px #00E4FF,
-    0 0 80px #00E4FF; 
-}
+/* PRO HOVER SOLUTION: The "Levitation Reactor"                        */
+/* ------------------------------------------------------------------- */
+/* The @media (hover: hover) query ensures this code ONLY runs on 
+   devices that actually have a mouse/cursor. This prevents the 
+   "Sticky Hover" glitch on iPhones and Androids where the button 
+   gets stuck in the 'lifted' position after you tap it.
 */
 
-/* =================================================================== */
-/* ANIMATION OPTION 3: THE IDLE PULSE (Commented Out)                  */
-/* "Alive" - Gently throbs even when you aren't touching it            */
-/* To use: Add 'animation: pulse-glow 2s infinite;' to .floating-btn   */
-/* =================================================================== */
+@media (hover: hover) {
+  .floating-btn:hover {
+    /* The Lift: Moves UP 6 pixels to simulate anti-gravity */
+    transform: translateY(-6px); 
 
-/*
-@keyframes pulse-glow {
-  0% { box-shadow: 0 0 0 0 rgba(0, 228, 255, 0.4); }
-  70% { box-shadow: 0 0 0 15px rgba(0, 228, 255, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(0, 228, 255, 0); }
+    /* The Reactor Glow: Center gets brighter */
+    background-color: #8BF7FF; 
+    
+    /* The Shadow Stack:
+       1. Inner bright glow (The core)
+       2. Outer cyan spread (The atmosphere)
+       3. Deep shadow (The distance from the ground) */
+    box-shadow: 
+      0 0 15px #8BF7FF,        /* Core intensity */
+      0 0 30px #00E4FF,        /* Atmospheric glow */
+      0 15px 20px rgba(0, 0, 0, 0.5); /* Ground shadow moves away */
+  }
 }
-*/
