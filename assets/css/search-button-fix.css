@@ -1,4 +1,6 @@
+/* ------------------------------------------------------------------- */
 /* PAGE SPECIFIC STYLES: Search & 404 Only                             */
+/* ------------------------------------------------------------------- */
 
 /* 1. BASE STATE (Normal) */
 .search .wp-block-search__button,
@@ -9,7 +11,7 @@
   padding: 10px 25px !important;
   text-decoration: none !important;
   
-  /* USER'S BASE GLOW RULES */
+  /* GLOW RULES */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Normal state shadow */
   transition: box-shadow 0.3s ease-in-out, transform 0.2s, background-color 0.3s, color 0.3s;
 }
@@ -22,7 +24,7 @@
   color: #000000 !important;
   border-color: #00E4FF !important;
 
-  /* USER'S HOVER RULES (Exact Match) */
+  /* HOVER RULES (Exact Match) */
   /* Adds a wider, softer cyan glow + slight lift */
   box-shadow: 0 0 10px rgba(0, 228, 255, 0.8), /* Soft inner glow */
               0 0 20px rgba(0, 228, 255, 0.6), /* Wider outer glow */
