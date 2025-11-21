@@ -1,83 +1,94 @@
 /* ------------------------------------------------------------------- */
-/* UNIVERSAL FLOATING "VOTE NOW" BUTTON  */
+/* FLOATING "NEW SUBMISSION" BUTTON (The Glowing Oracle Orb) */
 /* ------------------------------------------------------------------- */
 
 .floating-btn {
-  position: fixed; /* Keeps it in the viewport */
-  top: 115px; 
-  right: 15px;
-  z-index: 1000; /* Stays above content */
-  cursor: pointer;
-  text-decoration: none; /* Removes the link underline */
-
-  /* Flexbox for perfect wrapping and centering */
-  display: flex;
-  align-items: center; /* Vertically centers the stacked text */
-  justify-content: center; /* Horizontally centers the stacked text */
-
-  /* Dimensions for Button */
-  width: 70px; /* Sets a fixed width to FORCE the wrapping/stacking */
-  border-radius: 60px;
-  padding: 12px 15px; /* Adjusted: Use top/bottom padding for height control */
-
-  /* Text and Alignment */
-  text-align: center;
-  color: #000000 !important;
-  font-size: 1rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  white-space: normal;
-  line-height: 1.1;
-
-  /* Color and Shadow */
-  background-color: #00E4FF;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-
-  /* Smooth transition for hover effects */
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-/* FLOATING BUTTON GLOW */
-.floating-btn {
+  /* Positioning: Fixed in lower right corner */
   position: fixed;
-  top: 115px;
-  right: 15px;
+  bottom: 30px;
+  right: 20px;
   z-index: 1000;
-  cursor: pointer;
-  text-decoration: none;
 
-  /* Flexbox for perfect wrapping and centering */
+  /* Shape: Perfect Circle */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  
+  /* Content Alignment */
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
 
-  /* Dimensions for Button */
-  width: 70px;
-  border-radius: 60px;
-  padding: 12px 15px;
-
-  /* Text and Alignment */
-  text-align: center;
-  color: #000000 !important;
-  font-size: 1rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  white-space: normal;
-  line-height: 1.1;
-
-  /* Color and Shadow (Base state) */
+  /* Visuals: Base State */
   background-color: #00E4FF;
-  /* Use the transition property to smooth the shadow change */
-  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s ease-in-out;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  color: #000000 !important;
+  text-decoration: none;
+  
+  /* Base Shadow - slightly tighter to show it's "grounded" */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+
+  /* Typography */
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
+  font-family: sans-serif;
+  padding-bottom: 4px;
+
+  /* Smooth Animation for the "Lift" */
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.3s ease-in-out,
+              background-color 0.3s;
 }
 
-/* Updated Hover Effect for Glow */
+/* =================================================================== */
+/* ANIMATION OPTION 1: THE LEVITATION REACTOR (Active)                 */
+/* "Technological Magic" - Floats up and glows like an artifact        */
+/* =================================================================== */
+
 .floating-btn:hover {
-  background-color: #00E4FF; /* Keep base color or slightly lighten */
-  transform: scale(1.05); /* Slight lift effect */
-  /* The Glow Effect: multiple box shadows stacked for depth */
-  box-shadow: 0 0 15px #8BF7FF, /* Soft central light */
-              0 0 30px #00E4FF, /* Wider spread */
-              0 4px 15px rgba(0, 0, 0, 0.8); /* Stronger overall shadow */
+  /* The Lift: Moves UP 5 pixels to simulate anti-gravity */
+  transform: translateY(-6px); 
+
+  /* The Reactor Glow: */
+  background-color: #8BF7FF; /* Center gets slightly brighter/whiter */
+  
+  /* The Shadow:
+     1. Inner bright glow (The core)
+     2. Outer cyan spread (The atmosphere)
+     3. Deep shadow (The distance from the ground) */
+  box-shadow: 
+    0 0 10px #8BF7FF,        /* Core intensity */
+    0 0 25px #00E4FF,        /* Atmospheric glow */
+    0 15px 20px rgba(0, 0, 0, 0.5); /* Ground shadow moves away */
 }
+
+
+/* =================================================================== */
+/* ANIMATION OPTION 2: THE ENERGY SURGE (Commented Out)                */
+/* "Power Up" - Stays still, but gets intensely bright                 */
+/* =================================================================== */
+
+/* .floating-btn:hover {
+  background-color: #ffffff; 
+  transform: scale(1.0); 
+  box-shadow: 
+    0 0 10px #00E4FF,
+    0 0 40px #00E4FF,
+    0 0 80px #00E4FF; 
+}
+*/
+
+/* =================================================================== */
+/* ANIMATION OPTION 3: THE IDLE PULSE (Commented Out)                  */
+/* "Alive" - Gently throbs even when you aren't touching it            */
+/* To use: Add 'animation: pulse-glow 2s infinite;' to .floating-btn   */
+/* =================================================================== */
+
+/*
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(0, 228, 255, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(0, 228, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 228, 255, 0); }
+}
+*/
