@@ -14,7 +14,7 @@ This project demonstrates proficiency in building fast, scalable, and visually c
 | :--- | :--- | :--- |
 | **WordPress FSE** | Core content management and visual editing platform. | Theme customization, block overrides, template design. |
 | **`theme.json`** | **Primary Styling Engine** | Mastery of JSON-based design systems for color palettes, typography, spacing, and block-level styles. **Performance optimization** by avoiding external CSS. |
-| **CSS/Sass** | Custom styles and overrides (`style.css`). | CSS cascade control, use of custom properties (CSS variables), and modern selector usage. |
+| **CSS/Sass** | Custom styles and overrides (`style.css`). | CSS cascade control, use of custom properties (CSS variables with HTML tags), and modern selector usage. |
 | **GIMP/Graphic Art** | Creating/Editing theme assets (Logo, Favicon, Banners). | Image optimization, asset preparation for web use, and integration of custom visual assets into the theme structure. |
 | **Git & GitHub** | Version control, collaboration, and deployment pipeline. | Branch management, clean commit history, and professional documentation standards. |
 
