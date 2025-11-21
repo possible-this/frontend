@@ -1,0 +1,21 @@
+/* ------------------------------------------------------------------- */
+/* MOBILE SCROLL LOGIC (Hides button on scroll down)                   */
+/* ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+    .floating-btn {
+        /* Adds smooth movement for the hide/show effect */
+        transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.3s !important;
+        /* Ensures the button starts in its natural position */
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    /* This class is added via JS when scrolling DOWN */
+    .floating-btn.scroll-hide {
+        /* Moves the button UP and off the screen (negative Y) */
+        transform: translateY(-250%); 
+        opacity: 0; /* Fades it out so it's not distracting */
+        pointer-events: none; /* Prevents accidental clicks while hidden */
+    }
+}
