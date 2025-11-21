@@ -1,3 +1,13 @@
+// 🛑 DEPRECATED / SUPERCEDED CODE
+
+// **Date:** November 21, 2025
+// **Decision:** **Path Not Taken.**
+// **Reason for Deprecation:** This plan was superseded by a decision to load all open voting content on the homepage.
+
+// **Rationale:** Free user engagement should come first. An add content button will be fixed in the lower right corner instead.
+
+// **Reference:** See **`mobile-scroll-logic.css`** for the active configuration code.
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // 1. Find the button
