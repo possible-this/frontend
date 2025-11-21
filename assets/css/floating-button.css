@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------- */
-/* FLOATING "NEW SUBMISSION" BUTTON (The Glowing Oracle Orb) */
+/* FLOATING "NEW SUBMISSION" BUTTON (The Glowing Oracle Orb)           */
 /* ------------------------------------------------------------------- */
 
 .floating-btn {
@@ -35,26 +35,50 @@
   font-family: sans-serif;
   padding-bottom: 4px;
 
+  /* ================================================================= */
+  /* CRITICAL MOBILE FIXES (ANTI-GLITCH)                               */
+  /* ================================================================= */
+  
+  /* 1. STOP THE MENU: Disables "Copy/Open" menu on long press */
+  -webkit-touch-callout: none; 
+
+  /* 2. STOP THE DRAG: Prevents dragging the button like an image */
+  -webkit-user-drag: none;
+
+  /* 3. STOP THE SQUARE: Removes the gray/blue highlight tap box */
+  -webkit-tap-highlight-color: transparent;
+  
+  /* 4. STOP THE STRETCH: Prevents selecting the "+" text */
+  user-select: none;
+  -webkit-user-select: none;
+  
+  /* 5. REMOVE OUTLINES: Prevents browser default focus rings */
+  outline: none;
+  /* ================================================================= */
+
   /* Smooth Animation for the "Lift" */
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
               box-shadow 0.3s ease-in-out,
               background-color 0.3s;
 }
 
-/* PRO HOVER SOLUTION: The "Levitation Reactor"                        */
-/* ------------------------------------------------------------------- */
-/* The @media (hover: hover) query ensures this code ONLY runs on 
-   devices that actually have a mouse/cursor. This prevents the 
-   "Sticky Hover" glitch on iPhones and Androids where the button 
-   gets stuck in the 'lifted' position after you tap it.
-*/
+/* Remove focus outline if keyboard navigation isn't being used */
+.floating-btn:focus {
+  outline: none;
+}
+
+/* =================================================================== */
+/* ANIMATION OPTION 1: THE LEVITATION REACTOR (Smart Hover)            */
+/* "Technological Magic" - Floats up and glows like an artifact        */
+/* Wrapped in @media to prevent "Sticky Hover" on phones               */
+/* =================================================================== */
 
 @media (hover: hover) {
   .floating-btn:hover {
     /* The Lift: Moves UP 6 pixels to simulate anti-gravity */
     transform: translateY(-6px); 
 
-    /* The Reactor Glow: Center gets brighter */
+    /* The Reactor Glow: Center gets slightly brighter/whiter */
     background-color: #8BF7FF; 
     
     /* The Shadow Stack:
@@ -66,4 +90,16 @@
       0 0 30px #00E4FF,        /* Atmospheric glow */
       0 15px 20px rgba(0, 0, 0, 0.5); /* Ground shadow moves away */
   }
+}
+
+/* ------------------------------------------------------------------- */
+/* ACTIVE STATE: Works on both Mobile Taps and Desktop Clicks          */
+/* ------------------------------------------------------------------- */
+.floating-btn:active {
+  /* When tapped, it "presses down" slightly */
+  transform: scale(0.95);
+  background-color: #8BF7FF;
+  
+  /* Ensure no square shadow appears here either */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
 }
