@@ -1,19 +1,34 @@
+/* PAGE SPECIFIC STYLES: Search & 404 Only                             */
 
-/* PAGE SPECIFIC STYLES: Search & 404 Only                         
-
+/* 1. BASE STATE (Normal) */
 .search .wp-block-search__button,
 .error404 .wp-block-search__button {
-  /* 1. The Cyan Border */
+  /* STRUCTURAL STYLES */
   border: 1px solid #00E4FF !important;
-  
-  /* 2. The 25px Radius (Updated to match your request) */
   border-radius: 25px !important;
-  
-  /* 3. Text Styling: No underline */
+  padding: 10px 25px !important;
   text-decoration: none !important;
   
-  /* Optional: Ensure text has room to breathe inside the border */
-  padding: 10px 25px !important;
+  /* USER'S BASE GLOW RULES */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Normal state shadow */
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s, background-color 0.3s, color 0.3s;
+}
+
+/* 2. HOVER STATE (Universal Glow Application) */
+.search .wp-block-search__button:hover,
+.error404 .wp-block-search__button:hover {
+  /* COLOR OVERRIDES (Prevents default black background) */
+  background-color: #00E4FF !important;
+  color: #000000 !important;
+  border-color: #00E4FF !important;
+
+  /* USER'S HOVER RULES (Exact Match) */
+  /* Adds a wider, softer cyan glow + slight lift */
+  box-shadow: 0 0 10px rgba(0, 228, 255, 0.8), /* Soft inner glow */
+              0 0 20px rgba(0, 228, 255, 0.6), /* Wider outer glow */
+              0 4px 12px rgba(0, 0, 0, 0.6) !important; /* Retains some original shadow */
+              
+  transform: translateY(-2px) !important; /* Slight lift for emphasis */
 }
 
 /* Optional: Match the Input Field to the button's style */
