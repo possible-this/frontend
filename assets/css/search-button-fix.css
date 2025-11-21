@@ -1,0 +1,24 @@
+
+/* PAGE SPECIFIC STYLES: Search & 404 Only                         
+
+.search .wp-block-search__button,
+.error404 .wp-block-search__button {
+  /* 1. The Cyan Border */
+  border: 1px solid #00E4FF !important;
+  
+  /* 2. The 25px Radius (Updated to match your request) */
+  border-radius: 25px !important;
+  
+  /* 3. Text Styling: No underline */
+  text-decoration: none !important;
+  
+  /* Optional: Ensure text has room to breathe inside the border */
+  padding: 10px 25px !important;
+}
+
+/* Optional: Match the Input Field to the button's style */
+.search .wp-block-search__input,
+.error404 .wp-block-search__input {
+  border: 1px solid #00E4FF !important;
+  border-radius: 25px !important;
+}
